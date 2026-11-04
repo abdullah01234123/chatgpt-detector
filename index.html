@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Check text for patterns commonly associated with AI-generated writing. Paste text to prepare an AI content analysis.">
+  <meta name="theme-color" content="#f7f8fc">
+  <title>ChatGPT Detector — AI Content Checker</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="/" aria-label="TextCheck home">
+      <span class="brand-mark">T</span><span>TextCheck</span>
+    </a>
+    <nav aria-label="Main navigation">
+      <a href="#how-it-works">How it works</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="eyebrow"><span class="eyebrow-dot"></span> AI WRITING ANALYSIS</div>
+      <h1>ChatGPT &amp; AI Content Detector</h1>
+      <p class="hero-copy">Check text for patterns commonly associated with AI-generated writing.</p>
+
+      <section class="tool-card" aria-label="AI content detector">
+        <label class="sr-only" for="text-input">Text to analyze</label>
+        <textarea id="text-input" maxlength="30000" placeholder="Paste your text here to check it for AI-generated writing patterns..." spellcheck="true"></textarea>
+        <div class="input-footer">
+          <span id="word-count" aria-live="polite">0 words</span>
+          <button id="clear-button" class="text-button" type="button">Clear text</button>
+        </div>
+        <button id="analyze-button" class="primary-button" type="button">
+          <span>Check text</span><span aria-hidden="true">→</span>
+        </button>
+        <p class="tool-note">No account required · Text analysis will be available when the detection service is connected</p>
+        <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+      </section>
+
+      <div class="trust-row" aria-label="Tool features">
+        <div><span class="trust-icon">✓</span><span>Simple to use</span></div>
+        <div><span class="trust-icon">⚡</span><span>Designed for quick checks</span></div>
+        <div><span class="trust-icon">⌁</span><span>Clear, readable results</span></div>
+      </div>
+    </section>
+
+    <section class="info-section" id="how-it-works">
+      <div class="section-heading">
+        <span class="eyebrow">ABOUT THE TOOL</span>
+        <h2>Check writing for AI patterns</h2>
+        <p>Use the checker to review text that may have been produced with ChatGPT or other AI writing tools.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon">01</div>
+          <h3>Paste your text</h3>
+          <p>Add the passage you want to review. Longer samples can provide more context for an analysis.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">02</div>
+          <h3>Run an analysis</h3>
+          <p>The detection service will assess writing patterns after the backend has been connected.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon">03</div>
+          <h3>Review the result</h3>
+          <p>Use the result as an indicator, not proof. AI detectors can make mistakes on both human and AI-written text.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="info-section limitations">
+      <div class="section-heading">
+        <span class="eyebrow">IMPORTANT TO KNOW</span>
+        <h2>AI detection is an estimate, not a verdict</h2>
+        <p>No automated detector can reliably prove who or what wrote a passage. Editing, paraphrasing, short samples, and writing style can affect results. Do not use a detector score alone to make academic, employment, or disciplinary decisions.</p>
+      </div>
+    </section>
+
+    <section class="faq-section" id="faq">
+      <div class="section-heading">
+        <span class="eyebrow">HELP CENTER</span>
+        <h2>Frequently asked questions</h2>
+      </div>
+      <details>
+        <summary>Can this tool detect ChatGPT text?</summary>
+        <p>The planned detection service will look for patterns associated with AI-generated text, including text that may have been produced by ChatGPT. Results are estimates and are not guaranteed to identify the author.</p>
+      </details>
+      <details>
+        <summary>Can an AI detector be 100% accurate?</summary>
+        <p>No. AI detection systems can produce false positives and false negatives. Treat any score as one signal among several, not definitive evidence.</p>
+      </details>
+      <details>
+        <summary>Does this page currently analyze text?</summary>
+        <p>This is the front-end preview. A detection API and secure server-side connection still need to be configured before live analysis is available.</p>
+      </details>
+      <details>
+        <summary>Should I paste private or confidential information?</summary>
+        <p>Do not submit sensitive or confidential material unless the final service's privacy policy clearly explains how text is processed, retained, and shared.</p>
+      </details>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="/"><span class="brand-mark">T</span><span>TextCheck</span></a>
+    <p>AI writing analysis, with results that should be interpreted carefully.</p>
+    <span>© <span id="year"></span> TextCheck</span>
+  </footer>
+  <script src="assets/app.js" defer></script>
+</body>
+</html>
